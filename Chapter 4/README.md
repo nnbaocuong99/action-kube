@@ -1,43 +1,43 @@
-#### 1. To create the RC via
-``` bash
-$ kubectl create -f kubapp-rc.yaml
+## Chapter 4
+
+#### 1. Create the RC
+```bash
+kubectl create -f k8sapp-rc.yaml
 ```
 
-2. To add and remove labels from the pod (so pod will be removed from the 
-scope of RC) run
+2. To add, remove labels from the scope (pod)
 ``` bash
 $ kubectl label pod <pods name> type=special
 $ kubectl label pod <pods name> app=kubapp2 --overwrite
 $ kubectl get po
 ```
 
-3. To scale your RC up run
-``` bash
-$ kubectl scale rc kubapp --replicas=10
+3. To scale RC
+```shell
+kubectl scale rc k8sapp --replicas=10
 ```
 
-4. To delete the RC without all pods, run:
-``` bash
-$ kubectl delete rc kubapp --cascade=false
+4. To delete the RC without pods
+``shell
+kubectl delete rc k8sapp --cascade=false
 ```
 
-5. To start a new ReplicaSet run
-``` bash
-$ kubectl create -f kubapp-rs.yaml
+5. Start a new RS
+```bash
+kubectl create -f k8sapp-rs.yaml
 ```
 
 6. To check the information about your ReplicaSet run:
-``` bash
-$ kubectl describe rs
+```bash
+kubectl describe rs
 ```
 
 7. Example of scheduled job:
-``` 
+```yaml 
 apiVersion: batch/v2alpha1
 kind: CronJob
 spec:
   schedule: "0 3 * * *"
   startingDeadlineSeconds: 15
-...
 ```
 
