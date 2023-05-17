@@ -4,6 +4,8 @@ Examples from ["Kubernetes in Action"](https://www.manning.com/books/kubernetes-
 
 # Table of Contents
 - Docker and Kubernetes.
+  - Dockerfile:
+  - App:
 - Deploying containers in pods.
 - Keep running, replicating pods.
 - Exposing pods as a service.
