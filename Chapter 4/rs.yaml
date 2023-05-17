@@ -1,0 +1,22 @@
+---
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: k8sapp
+spec:
+  replicas: 3
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values:
+          - k8sapp
+  template:
+    metadata: 
+      labels:
+        app: k8sapp
+    spec:
+      containers: 
+      - name: k8sapp
+        image: nnbaocuong99/kubapp 
+...

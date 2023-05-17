@@ -1,0 +1,15 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  rules:
+  - host: k8s.example.com
+    http:
+      paths:
+        - path: /k8sapp
+          backend: 
+            serviceName: k8sapp
+            servicePort: 80
+...

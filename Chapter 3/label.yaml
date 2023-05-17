@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: k8sapp-manual-v2
+  labels: 
+    creation_method: manual
+    env: prod
+spec:
+  containers:
+  - image: nnbaocuong99/k8sapp
+    name: k8sapp

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: k8sapp-manual
+spec:
+  containers:
+  - image: nnbaocuong99/k8sbapp
+    name: k8sapp
+    ports: 
+    - containerPort: 8080
+      protocol: TCP
