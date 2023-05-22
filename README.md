@@ -1,4 +1,4 @@
-###### Examples from ["Kubernetes in Action"](https://www.manning.com/books/kubernetes-in-action) by Marko Luksa
+###### Examples: from ["Kubernetes in Action"](https://www.manning.com/books/kubernetes-in-action) by Marko Luksa
 
 ## Table of Contents
 
